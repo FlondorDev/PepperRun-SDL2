@@ -52,12 +52,15 @@
                 "${workspaceFolder}/Engine/Manager/*.cpp",
                 "${workspaceFolder}/Engine/Physics/*.cpp",
                 "-std=c++17",
-                "-I/opt/homebrew/Cellar/sdl2_image/2.6.0_1/include/SDL2",
+                "-I/opt/homebrew/Cellar/sdl2_image/2.6.2/include/SDL2",
                 "-I/opt/homebrew/Cellar/sdl2/2.0.22/include/SDL2",
-                "-L/opt/homebrew/Cellar/sdl2_image/2.6.0_1/lib",
+                "-I/opt/homebrew/Cellar/sdl2_ttf/2.20.1/include/SDL2",
+                "-L/opt/homebrew/Cellar/sdl2_image/2.6.2/lib",
                 "-L/opt/homebrew/Cellar/sdl2/2.0.22/lib",
+                "-L/opt/homebrew/Cellar/sdl2_ttf/2.20.1/lib",
                 "-lsdl2",
                 "-lsdl2_image",
+                "-lsdl2_ttf",
                 "-o${workspaceFolder}/Main"
             ],
             "options": {
