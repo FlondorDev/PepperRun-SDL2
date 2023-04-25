@@ -1,21 +1,18 @@
 {
     "configurations": [
         {
-            "name": "Mac",
+            "name": "Windows",
             "includePath": [
                 "${default}",
-                "/opt/homebrew/Cellar/sdl2_image/2.6.2/include/SDL2",
-                "/opt/homebrew/Cellar/sdl2/2.0.22/include/SDL2",
-                "/opt/homebrew/Cellar/sdl2_ttf/2.20.1/include/SDL2"
+                "E:\\Programmi\\SDL2_IMAGE\\include\\SDL2",
+                "E:\\Programmi\\SDL2\\include\\SDL2",
+                "E:\\Programmi\\SDL2_TTF\\include\\SDL2"
             ],
             "defines": [],
-            "macFrameworkPath": [
-                "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks"
-            ],
-            "compilerPath": "/usr/bin/clang",
+            "compilerPath": "E:\\Programmi\\MinGW-w64\\bin\\g++",
             "cStandard": "c17",
             "cppStandard": "c++17",
-            "intelliSenseMode": "gcc-arm64"
+            "intelliSenseMode": "gcc-x64"
         }
     ],
     "version": 4

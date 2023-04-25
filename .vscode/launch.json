@@ -8,14 +8,14 @@
             "name": "SDL2 Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/Main",
+            "program": "${workspaceFolder}/Main.exe",
             "args": [],
             "stopAtEntry": false,
-            "cwd": "${fileDirname}",
+            "cwd": "${workspaceFolder}",
             "environment": [],
             "externalConsole": false,
-            "MIMode": "lldb",
-            "preLaunchTask": "Build SDL2"
+            "MIMode": "gdb",
+            "preLaunchTask": "Build SDL2 Windows"
         }
 
     ]

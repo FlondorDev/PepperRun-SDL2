@@ -4,7 +4,7 @@
         {
             "type": "cppbuild",
             "label": "Build SDL2 Windows",
-            "command": "x86_64-w64-mingw32-gcc",
+            "command": "g++",
             "args": [
                 "-g",
                 "${workspaceFolder}/*.cpp",
@@ -13,13 +13,15 @@
                 "${workspaceFolder}/Engine/Manager/*.cpp",
                 "${workspaceFolder}/Engine/Physics/*.cpp",
                 "-std=c++17",
-                "-I/opt/homebrew/Cellar/sdl2_image/x86_64-w64-mingw32/include/SDL2",
-                "-I/opt/homebrew/Cellar/sdl2/x86_64-w64-mingw32/include/SDL2",
-                "-L/opt/homebrew/Cellar/sdl2_image/x86_64-w64-mingw32/lib",
-                "-L/opt/homebrew/Cellar/sdl2/x86_64-w64-mingw32/lib",
-                "-lsdl2main",
+                "-IE:\\Programmi\\SDL2\\include\\SDL2",
+                "-LE:\\Programmi\\SDL2\\lib",
+                "-IE:\\Programmi\\SDL2_IMAGE\\include\\SDL2",
+                "-LE:\\Programmi\\SDL2_IMAGE\\lib",
+                "-IE:\\Programmi\\SDL2_TTF\\include\\SDL2",
+                "-LE:\\Programmi\\SDL2_TTF\\lib",
                 "-lsdl2",
                 "-lsdl2_image",
+                "-lsdl2_ttf",
                 "-Wl,-Bstatic",
                 "-lstdc++",
                 "-lwinpthread",
@@ -28,7 +30,7 @@
                 "${workspaceFolder}/Main.exe",
             ],
             "options": {
-                "cwd": "${fileDirname}"
+                "cwd": "${workspaceFolder}"
             },
             "problemMatcher": [
                 "$gcc"
@@ -64,7 +66,7 @@
                 "-o${workspaceFolder}/Main"
             ],
             "options": {
-                "cwd": "${fileDirname}"
+                "cwd": "${workspaceFolder}"
             },
             "problemMatcher": [
                 "$gcc"

@@ -1,8 +1,8 @@
+#include <iostream>
 #include <SDL.h>
 #include <SDL_image.h>
 #include <SDL_ttf.h>
 #include "Engine/include/Engine.hpp"
-#include <iostream>
 
 int main(int argc, char* args[])
 {
@@ -11,9 +11,9 @@ int main(int argc, char* args[])
     GFXManager::Init("Chironi");
     GFXManager::DefaultFont = TTF_OpenFont( "Assets/Roboto-Black.ttf", 72 );
 
-    GFXManager::Add("Cobble", "Assets/Cobble.png");
-    GFXManager::Add("Player", "Assets/Player.png");
-    GFXManager::Add("Wall", "Assets/Wall.png");
+    GFXManager::Add("Cobble", "./Assets/Cobble.png");
+    GFXManager::Add("Player", "./Assets/Player.png");
+    GFXManager::Add("Wall", "./Assets/Wall.png");
     GFXManager::Add("testo", GFXManager::CreateTextImage("Pepper Run", {255,255,255,255}));
 
     Camera camera {"Main"};
