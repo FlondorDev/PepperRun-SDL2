@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "SDL2 Launch",
+            "name": "SDL2 Launch Windows",
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/Main.exe",
@@ -16,6 +16,19 @@
             "externalConsole": false,
             "MIMode": "gdb",
             "preLaunchTask": "Build SDL2 Windows"
+        },
+        {
+            "name": "SDL2 Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/Main",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "preLaunchTask": "Build SDL2"
         }
 
     ]

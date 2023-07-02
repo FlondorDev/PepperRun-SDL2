@@ -1,6 +1,35 @@
 {
     "configurations": [
         {
+            "name": "MacOs",
+            "includePath": [
+                "/opt/homebrew/Cellar/sdl2_image/2.6.3_1/include/SDL2/**",
+                "/opt/homebrew/Cellar/sdl2/2.28.0/include/SDL2/**",
+                "/opt/homebrew/Cellar/sdl2_ttf/2.20.2/include/SDL2/**",
+                "/Users/domenico/Library/Application Support/CrossOver/Bottles/PSY-Q/drive_c/psyq/include/"
+            ],
+            "defines": [],
+            "macFrameworkPath": [
+                "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks"
+            ],
+            "compilerPath": "/usr/bin/g++",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "macos-clang-arm64",
+            "compilerPathInCppPropertiesJson": "/usr/bin/g++",
+            "mergeConfigurations": false,
+            "browse": {
+                "path": [
+                    "/Users/domenico/Library/Application Support/CrossOver/Bottles/PSY-Q/drive_c/psyq/include/",
+                    "/opt/homebrew/Cellar/sdl2_image/2.6.3_1/include/SDL2",
+                    "/opt/homebrew/Cellar/sdl2/2.28.0/include/SDL2",
+                    "/opt/homebrew/Cellar/sdl2_ttf/2.20.2/include/SDL2",
+                    "${workspaceFolder}"
+                ],
+                "limitSymbolsToIncludedHeaders": true
+            }
+        },
+        {
             "name": "Windows",
             "includePath": [
                 "${default}",
