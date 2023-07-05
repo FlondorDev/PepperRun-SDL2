@@ -35,11 +35,10 @@ int main(int argc, char* args[])
     SDL_Rect viewPort = { GFXManager::LogicWidth - 64 - 128 , 64, 128, 128 };
 
     while (!quit) {
+        Clock::StartTick();
         //Clear screen
         SDL_RenderClear( GFXManager::Renderer );
         SDL_RenderSetViewport(GFXManager::Renderer, nullptr);
-
-        Clock::StartTick();
 
         while(SDL_PollEvent(&e) != 0){
             if (e.type == SDL_QUIT)
@@ -47,6 +46,7 @@ int main(int argc, char* args[])
                 quit = true;
             }
         }
+
 
         ControllerManager::Input(SDL_GetKeyboardState(nullptr));
 
@@ -65,14 +65,15 @@ int main(int argc, char* args[])
         //SDL_RenderSetViewport(GFXManager::Renderer, &viewPort);
         //SDL_RenderCopy(GFXManager::Renderer, GFXManager::Get("Wall"), nullptr, nullptr);
         
+        
         //Update screen
         SDL_SetRenderDrawColor(GFXManager::Renderer, 0,0,0,255);
         SDL_RenderPresent( GFXManager::Renderer );
 
-        Clock::EndTick();
         Title = "Current FPS: " + std::to_string(Clock::GetFps()) + " Current DeltaTime: " + std::to_string(Clock::GetDeltaTime());
         SDL_SetWindowTitle(GFXManager::Window, Title.c_str());
  
+        Clock::EndTick();
     }
 
     ControllerManager::Clear();
