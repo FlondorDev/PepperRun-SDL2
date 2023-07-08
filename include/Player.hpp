@@ -2,7 +2,7 @@
 #define _PLAYER_H_
 #include <iostream>
 #include <SDL.h>
-#include "..//Engine/include/GameObject.hpp"
+#include "../Engine/include/GameObject.hpp"
 
 class Player : public IController, public GameObject
 {

@@ -2,7 +2,7 @@
 #define _PEPPER_H_
 #include <iostream>
 #include <SDL.h>
-#include "..//Engine/include/GameObject.hpp"
+#include "../Engine/include/GameObject.hpp"
 
 class Pepper : public GameObject
 {
