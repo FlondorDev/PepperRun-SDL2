@@ -1,8 +1,10 @@
 /.DS_Store
-/Main
-/Main.dSYM
-/Main.exe
-/SDL2.dll
-/SDL2_TTF.dll
-/SDL2_Image.dll
+/bin/Main
+/bin/Main.dSYM
+/bin/Main.exe
+/lib/SDL2.dll
+/lib/SDL2_TTF.dll
+/lib/SDL2_Image.dll
+/lib/libEngine.dylib
+/lib/libEngine.dylib.dSYM
 /Assets/.DS_Store

@@ -47,23 +47,17 @@
             "command": "g++",
             "args": [
                 "-fdiagnostics-color=always",
-                "-g",
-                "${workspaceFolder}/*.cpp",
-                "${workspaceFolder}/Engine/*.cpp",
-                "${workspaceFolder}/Engine/Interface/*.cpp",
-                "${workspaceFolder}/Engine/Manager/*.cpp",
-                "${workspaceFolder}/Engine/Physics/*.cpp",
+                "${workspaceFolder}/src/*.cpp",
                 "-std=c++17",
                 "-I/opt/homebrew/Cellar/sdl2_image/2.6.3_1/include/SDL2",
                 "-I/opt/homebrew/Cellar/sdl2/2.28.0/include/SDL2",
                 "-I/opt/homebrew/Cellar/sdl2_ttf/2.20.2/include/SDL2",
-                "-L/opt/homebrew/Cellar/sdl2_image/2.6.3_1/lib",
-                "-L/opt/homebrew/Cellar/sdl2/2.28.0/lib",
-                "-L/opt/homebrew/Cellar/sdl2_ttf/2.20.2/lib",
+                "-L${workspaceFolder}/lib",
+                "-lengine",
                 "-lsdl2",
                 "-lsdl2_image",
                 "-lsdl2_ttf",
-                "-o${workspaceFolder}/Main"
+                "-o${workspaceFolder}/bin/Main"
             ],
             "options": {
                 "cwd": "${workspaceFolder}"
@@ -75,7 +69,41 @@
                 "kind": "build",
                 "isDefault": true
             },
+            "dependsOn":"Build SDL2 Engine",
             "detail": "Build project with SDL2."
+        },
+        {
+            "type": "cppbuild",
+            "label": "Build SDL2 Engine",
+            "command": "g++",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-dynamiclib",
+                "${workspaceFolder}//Engine/src/*.cpp",
+                "${workspaceFolder}//Engine/src/Interface/*.cpp",
+                "${workspaceFolder}//Engine/src/Manager/*.cpp",
+                "${workspaceFolder}//Engine/src/Physics/*.cpp",
+                "-std=c++17",
+                "-I/opt/homebrew/Cellar/sdl2_image/2.6.3_1/include/SDL2",
+                "-I/opt/homebrew/Cellar/sdl2/2.28.0/include/SDL2",
+                "-I/opt/homebrew/Cellar/sdl2_ttf/2.20.2/include/SDL2",
+                "-L${workspaceFolder}/lib",
+                "-lsdl2",
+                "-lsdl2_image",
+                "-lsdl2_ttf",
+                "-o${workspaceFolder}/lib/libEngine.dylib"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Build Engine with SDL2."
         }
     ]
 }
